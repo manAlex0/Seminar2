@@ -47,13 +47,43 @@
 // 34, 5 -> не кратно, остаток 4
 // 16, 4 -> кратно
 
-System.Console.WriteLine("Введите первое число: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите второе число: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-int num3 = num2*2;
-int num4 = num1 % num2;
-if (num3 == num1)
-    System.Console.WriteLine("Кратно");
+// System.Console.WriteLine("Введите первое число: ");
+// int num1 = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите второе число: ");
+// int num2 = int.Parse(Console.ReadLine()!); //   Тоже самое Convert.ToInt32(Console.ReadLine())
+// int result = num1 % num2;
+// if (result == 0)
+//     System.Console.WriteLine("Кратно");
+// else
+//     System.Console.WriteLine($"Не кратно, остаток: {result}");
+
+
+
+// ************************************************************************************************
+// Задача 4. Напишите программу, которая принимает на вход число 
+//           и проверяет, кратно ли оно одновременно 7 и 23.
+// Например:
+// 14 -> нет
+// 46 -> нет
+// 161 -> да
+
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
+
+if (num % 7 == 0)
+{
+    if (num % 23 == 0)
+        System.Console.WriteLine($"{num} -> Да");
+        else 
+    System.Console.WriteLine($"{num} -> Нет");
+}
 else
-    System.Console.WriteLine($"Не кратно, остаток {num4}");
+    System.Console.WriteLine($"{num} -> Нет");
+// ************************************************************************************************
+// Задача 5. Напишите программу, которая принимает на вход вда числа и
+//           проверяет, являеися ли одно число квадратом другого.
+// Например:
+// 5, 25 -> да
+// -4, 16 -> да
+// 25, 5 -> да
+// 8, 9 -> нет
