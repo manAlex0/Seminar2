@@ -191,22 +191,22 @@
 // 1 -> нет
 // 567,123 -> 57,123
 
-System.Console.WriteLine("Введите число: ");
-double numFirst = Convert.ToDouble(Console.ReadLine());
-int numSecond = (int)numFirst;
-int check = 1;
-if (numFirst >= 99)
-{
-    while (numSecond > 9)
-    {
-        numSecond /= 10;
-        check *= 10;
-    }
-    numFirst = numFirst % (check / 10);
-    System.Console.WriteLine($"Получилось число: {numSecond}{numFirst}");
-}
-else
-    System.Console.WriteLine("Ввели неправильно число");
+// System.Console.WriteLine("Введите число: ");
+// double numFirst = Convert.ToDouble(Console.ReadLine());
+// int numSecond = (int)numFirst;
+// int check = 1;
+// if (numFirst >= 99)
+// {
+//     while (numSecond > 9)
+//     {
+//         numSecond /= 10;
+//         check *= 10;
+//     }
+//     numFirst = numFirst % (check / 10);
+//     System.Console.WriteLine($"Получилось число: {numSecond}{numFirst}");
+// }
+// else
+//     System.Console.WriteLine("Ввели неправильно число");
 
 
 
@@ -219,3 +219,17 @@ else
 // Напишите программу, считывающую с пользовательского ввода целое число n (неотрицательное), выводящее это число в консоль вместе с правильным образом изменённым словом "программист", для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
 
 // В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, как минимум до 1000 человек.
+
+System.Console.WriteLine("Введите количество программистов: ");
+int developerNumbers = Convert.ToInt32(System.Console.ReadLine());
+int sum = developerNumbers;
+sum /= 10;
+sum %=10;
+if (sum == 1 || developerNumbers%10 == 0 )
+    System.Console.WriteLine(developerNumbers + " программистов");
+else if (developerNumbers%10 == 1)
+    System.Console.WriteLine(developerNumbers + " программист");
+else if (2 >= developerNumbers%10 || developerNumbers%10 <= 4)
+    System.Console.WriteLine(developerNumbers + " программиста");
+else if (5 <= developerNumbers%10  || developerNumbers%10 <= 8 )
+    System.Console.WriteLine(developerNumbers + " программистов");
