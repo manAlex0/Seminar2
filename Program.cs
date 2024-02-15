@@ -130,7 +130,7 @@
 
 
 
-
+// ************************************************************************************************
 // Задача 1: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа. Через строку решать нельзя.
 // 456 -> 5
 // 782 -> 8
@@ -148,7 +148,7 @@
 
 
 
-
+// ************************************************************************************************
 // Задача 2: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.Через строку решать нельзя.
 // 645 -> 5
 // 78 -> третьей цифры нет
@@ -169,7 +169,7 @@
 
 
 
-
+// ************************************************************************************************
 // Задача 3: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 // 6 -> да
 // 7 -> да
@@ -184,9 +184,8 @@
 //     System.Console.WriteLine("Вы ввели не правильный день недели");
 
 
-
+// ************************************************************************************************
 // Задача необязательная 4: на входе целое или вещественное число, надо удалить вторую цифру слева целой части этого числа.
-
 // 145 -> 15
 // 1 -> нет
 // 567,123 -> 57,123
@@ -210,26 +209,108 @@
 
 
 
+// ************************************************************************************************
 // Задача необязательная 5:
-
 // В институте биоинформатики по офису передвигается робот. Недавно студенты из группы программистов написали для него программу, по которой робот, когда заходит в комнату, считает количество программистов в ней и произносит его вслух: "n программистов".
-
 // Для того, чтобы это звучало правильно, для каждого n нужно использовать верное окончание слова.
-
 // Напишите программу, считывающую с пользовательского ввода целое число n (неотрицательное), выводящее это число в консоль вместе с правильным образом изменённым словом "программист", для того, чтобы робот мог нормально общаться с людьми, например: 1 программист, 2 программиста, 5 программистов.
-
 // В комнате может быть очень много программистов. Проверьте, что ваша программа правильно обработает все случаи, как минимум до 1000 человек.
 
-System.Console.WriteLine("Введите количество программистов: ");
-int developerNumbers = Convert.ToInt32(System.Console.ReadLine());
-int sum = developerNumbers;
-sum /= 10;
-sum %=10;
-if (sum == 1 || developerNumbers%10 == 0 )
-    System.Console.WriteLine(developerNumbers + " программистов");
-else if (developerNumbers%10 == 1)
-    System.Console.WriteLine(developerNumbers + " программист");
-else if (2 >= developerNumbers%10 || developerNumbers%10 <= 4)
-    System.Console.WriteLine(developerNumbers + " программиста");
-else if (5 <= developerNumbers%10  || developerNumbers%10 <= 8 )
-    System.Console.WriteLine(developerNumbers + " программистов");
+// System.Console.WriteLine("Введите количество программистов: ");
+// int developerNumbers = Convert.ToInt32(System.Console.ReadLine());
+// int sum = developerNumbers;
+// sum / = 10;
+// sum % = 10;
+// if (sum == 1 || developerNumbers%10 == 0 )
+//     System.Console.WriteLine(developerNumbers + " программистов");
+// else if (developerNumbers%10 == 1)
+//     System.Console.WriteLine(developerNumbers + " программист");
+// else if (2 >= developerNumbers%10 || developerNumbers%10 <= 4)
+//     System.Console.WriteLine(developerNumbers + " программиста");
+// else if (5 <= developerNumbers%10  || developerNumbers%10 <= 8 )
+//     System.Console.WriteLine(developerNumbers + " программистов");
+
+
+
+
+// *******************************************************ПРОДОЛЖЕНИЕ
+// Задача №7. Напишите программу, которая принимает на вход координаты точки (X и Y),
+// причем X != 0 и Y != 0 и выдаёт номер четверти полоски, в которой находится это точка.
+
+// void CheckKoord(int x, int y) // void что-то делает, но ничего не возвращает
+// {
+//     if (x > 0 && y > 00)
+//         System.Console.WriteLine("Это четверть № 1");
+//     else if (x > 0 && y < 0)
+//         System.Console.WriteLine("Это четверть № 4");
+//     else if (x < 0 && y < 0)
+//         System.Console.WriteLine("Это четверть № 3");
+//     else if (x < 0 && y > 0)
+//         System.Console.WriteLine("Это четверть № 2");
+//     else
+//         System.Console.WriteLine("Точка находится на координатной оси");
+// }
+
+// int CheckKoord2(int x, int y) // void что-то делает, но что-то возвращает
+// {
+//     int result = 0;
+//     if (x > 0 && y > 00)
+//         result = 1;
+//     else if (x > 0 && y < 0)
+//         result = 4;
+//     else if (x < 0 && y < 0)
+//         result = 3;
+//     else if (x < 0 && y > 0)
+//         result = 2;
+//     return result;
+// }
+
+
+// Console.Clear();
+// System.Console.WriteLine("Введите координату X: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Введите координату Y: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+// CheckKoord(x, y);
+// System.Console.WriteLine($"Это четверть № {CheckKoord2(x,y)}");
+
+
+
+
+// ************************************************************************************************
+// Напишите программу, которая по заданному номеру четверти, 
+// показывает диапазон возможных координат точек в этой ветверти (x и y).
+
+void CheckKoord(int num)
+{
+    if (num == 1)
+        System.Console.WriteLine("X > 0, Y > 0");
+    else if (num == 2)
+        System.Console.WriteLine("X < 0, Y > 0");
+    else if (num == 3)
+        System.Console.WriteLine("X < 0, Y < 0");
+    else if (num == 4)
+        System.Console.WriteLine("X > 0, Y < 0");
+    else
+        System.Console.WriteLine("Такой четверти нет");
+}
+
+string CheckKoord2(int num)
+{
+    string result = "";
+    if (num == 1)
+        result = "X > 0, Y > 0";
+    else if (num == 2)
+        result = "X < 0, Y > 0";
+    else if (num == 3)
+        result = "X < 0, Y < 0";
+    else if (num == 4)
+        result = "X > 0, Y < 0";
+    return result;
+}
+
+
+System.Console.WriteLine("Введите четверь: ");
+int x = Convert.ToInt32(Console.ReadLine());
+CheckKoord(x);
+System.Console.WriteLine(CheckKoord2(x));
