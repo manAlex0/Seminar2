@@ -91,9 +91,7 @@ System.Console.WriteLine("Введите первое число: ");
 int num1 = int.Parse(Console.ReadLine()!);
 System.Console.WriteLine("Введите второе число: ");
 int num2 = int.Parse(Console.ReadLine()!);
-int result1 = num1 * num1;
-int result2 = num2 * num2;
-if (result1 == num2 || result2 == num1) // || если одно из них сработает то будет 'да'
+if (num1 * num1 == num2 || num2 * num2 == num1) // || если одно из них сработает то будет 'да'
     System.Console.WriteLine($"{num1}, {num2} -> да");
 else 
     System.Console.WriteLine($"{num1}, {num2} -> нет");
