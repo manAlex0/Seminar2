@@ -67,18 +67,13 @@
 // 46 -> нет
 // 161 -> да
 
-// System.Console.WriteLine("Введите число: ");
-// int num = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
 
-// if (num % 7 == 0)
-// {
-//     if (num % 23 == 0)
-//         System.Console.WriteLine($"{num} -> Да");
-//     else
-//         System.Console.WriteLine($"{num} -> Нет");
-// }
-// else
-//     System.Console.WriteLine($"{num} -> Нет");
+if (num % 7 == 0 && num % 23 == 0) // один аперсент (&) проверяет два условия, а один & если первый 'нет' то уходим в else
+        System.Console.WriteLine($"{num} -> Да");
+else
+    System.Console.WriteLine($"{num} -> Нет");
 
 
 
@@ -92,19 +87,19 @@
 // 25, 5 -> да
 // 8, 9 -> нет
 
-System.Console.WriteLine("Введите первое число: ");
-int num1 = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите второе число: ");
-int num2 = int.Parse(Console.ReadLine()!);
-int result1 = num1 * num1;
-int result2 = num2 * num2;
-if (result1 == num2)
-{
-    System.Console.WriteLine($"{num1}, {num2} -> да");
-}
-else if (result2 == num1)
-{
-    System.Console.WriteLine($"{num1}, {num2} -> да");
-}
-else 
-    System.Console.WriteLine($"{num1}, {num2} -> нет");
+// System.Console.WriteLine("Введите первое число: ");
+// int num1 = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите второе число: ");
+// int num2 = int.Parse(Console.ReadLine()!);
+// int result1 = num1 * num1;
+// int result2 = num2 * num2;
+// if (result1 == num2)
+// {
+//     System.Console.WriteLine($"{num1}, {num2} -> да");
+// }
+// else if (result2 == num1)
+// {
+//     System.Console.WriteLine($"{num1}, {num2} -> да");
+// }
+// else 
+//     System.Console.WriteLine($"{num1}, {num2} -> нет");
