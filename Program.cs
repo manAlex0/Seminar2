@@ -87,11 +87,38 @@
 // 25, 5 -> да
 // 8, 9 -> нет
 
-System.Console.WriteLine("Введите первое число: ");
-int num1 = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите второе число: ");
-int num2 = int.Parse(Console.ReadLine()!);
-if (num1 * num1 == num2 || num2 * num2 == num1) // || если одно из них сработает то будет 'да'
-    System.Console.WriteLine($"{num1}, {num2} -> да");
+// System.Console.WriteLine("Введите первое число: ");
+// int num1 = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите второе число: ");
+// int num2 = int.Parse(Console.ReadLine()!);
+// if (num1 * num1 == num2 || num2 * num2 == num1) // || если одно из них сработает то будет 'да'
+//     System.Console.WriteLine($"{num1}, {num2} -> да");
+// else 
+//     System.Console.WriteLine($"{num1}, {num2} -> нет");
+
+
+
+
+// ************************************************************************************************
+// Задача 6. Напишите программу, которая выводит случайное любое число удалить вторую цифру слева на права этого числа.
+// Например:
+// 456236 -> 46236
+// 78255 -> 7255
+// 918321 -> 98321
+
+int numFirst = new Random().Next(0, 999999999);
+System.Console.WriteLine($"Было сгенерировано число: {numFirst}");
+int numSecond = numFirst;
+int check = 1;
+if (numFirst >= 99)
+{
+    while (numSecond > 9 )
+    {
+        numSecond /= 10;
+        check *= 10;
+    }
+numFirst = numFirst % (check / 10);
+System.Console.WriteLine($"Получилось число: {numSecond}{numFirst}");
+}
 else 
-    System.Console.WriteLine($"{num1}, {num2} -> нет");
+System.Console.WriteLine("Ввели неправильно число");
