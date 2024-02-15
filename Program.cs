@@ -106,19 +106,19 @@
 // 78255 -> 7255
 // 918321 -> 98321
 
-int numFirst = new Random().Next(0, 999999999);
-System.Console.WriteLine($"Было сгенерировано число: {numFirst}");
+System.Console.WriteLine("Введите люое число: ");
+int numFirst = int.Parse(Console.ReadLine()!);
 int numSecond = numFirst;
 int check = 1;
 if (numFirst >= 99)
 {
-    while (numSecond > 9 )
+    while (numSecond > 9)
     {
         numSecond /= 10;
         check *= 10;
     }
-numFirst = numFirst % (check / 10);
-System.Console.WriteLine($"Получилось число: {numSecond}{numFirst}");
+    numFirst = numFirst % (check / 10);
+    System.Console.WriteLine($"Получилось число: {numSecond}{numFirst}");
 }
-else 
-System.Console.WriteLine("Ввели неправильно число");
+else
+    System.Console.WriteLine("Ввели неправильно число");
