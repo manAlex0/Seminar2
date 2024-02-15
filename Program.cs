@@ -174,14 +174,14 @@
 // 6 -> да
 // 7 -> да
 // 1 -> нет
-System.Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine()!);
-if (1 <= num && num <= 5)
-    System.Console.WriteLine("Нет");
-else if (num == 6 || num == 7)
-    System.Console.WriteLine("Да");
-else
-    System.Console.WriteLine("Вы ввели не правильный день недели");
+// System.Console.WriteLine("Введите число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// if (1 <= num && num <= 5)
+//     System.Console.WriteLine("Нет");
+// else if (num == 6 || num == 7)
+//     System.Console.WriteLine("Да");
+// else
+//     System.Console.WriteLine("Вы ввели не правильный день недели");
 
 
 
@@ -191,6 +191,22 @@ else
 // 1 -> нет
 // 567,123 -> 57,123
 
+System.Console.WriteLine("Введите число: ");
+double numFirst = Convert.ToDouble(Console.ReadLine());
+int numSecond = (int)numFirst;
+int check = 1;
+if (numFirst >= 99)
+{
+    while (numSecond > 9)
+    {
+        numSecond /= 10;
+        check *= 10;
+    }
+    numFirst = numFirst % (check / 10);
+    System.Console.WriteLine($"Получилось число: {numSecond}{numFirst}");
+}
+else
+    System.Console.WriteLine("Ввели неправильно число");
 
 
 
