@@ -154,28 +154,34 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-System.Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine()!);
-if (num >= 100)
-{
-    while (num >= 100)
-    {
-        num /= 10;
-    }
-    System.Console.WriteLine(num %= 10);
-}
-else
-    System.Console.WriteLine("Третьей цифры нет");
+// System.Console.WriteLine("Введите число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// if (num >= 100)
+// {
+//     while (num >= 100)
+//     {
+//         num /= 10;
+//     }
+//     System.Console.WriteLine(num %= 10);
+// }
+// else
+//     System.Console.WriteLine("Третьей цифры нет");
 
 
 
 
 // Задача 3: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
-
 // 6 -> да
 // 7 -> да
 // 1 -> нет
-
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
+if (1 <= num && num <= 5)
+    System.Console.WriteLine("Нет");
+else if (num == 6 || num == 7)
+    System.Console.WriteLine("Да");
+else
+    System.Console.WriteLine("Вы ввели не правильный день недели");
 
 
 
