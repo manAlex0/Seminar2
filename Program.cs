@@ -356,10 +356,10 @@
 System.Console.WriteLine("Введите число: ");
 int num = int.Parse(Console.ReadLine()!);
 int check = 0;
-double result = 2;
+int result = 0;
 while (check != num)
 {
-    result = Math.Pow(result, 2);
-    check = check + 1;
-    System.Console.Write($"{result} ");
+    result = result + 1;
+    System.Console.Write($"{result * result} ");
+    check +=1;
 }
