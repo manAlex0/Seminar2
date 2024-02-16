@@ -282,36 +282,84 @@
 // Напишите программу, которая по заданному номеру четверти, 
 // показывает диапазон возможных координат точек в этой ветверти (x и y).
 
-void CheckKoord(int num)
+// void CheckKoord(int num)
+// {
+//     if (num == 1)
+//         System.Console.WriteLine("X > 0, Y > 0");
+//     else if (num == 2)
+//         System.Console.WriteLine("X < 0, Y > 0");
+//     else if (num == 3)
+//         System.Console.WriteLine("X < 0, Y < 0");
+//     else if (num == 4)
+//         System.Console.WriteLine("X > 0, Y < 0");
+//     else
+//         System.Console.WriteLine("Такой четверти нет");
+// }
+
+// string CheckKoord2(int num)
+// {
+//     string result = "";
+//     if (num == 1)
+//         result = "X > 0, Y > 0";
+//     else if (num == 2)
+//         result = "X < 0, Y > 0";
+//     else if (num == 3)
+//         result = "X < 0, Y < 0";
+//     else if (num == 4)
+//         result = "X > 0, Y < 0";
+//     return result;
+// }
+
+
+// System.Console.WriteLine("Введите четверь: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// CheckKoord(x);
+// System.Console.WriteLine(CheckKoord2(x));
+
+
+
+
+// ************************************************************************************************
+// Задача № 9
+// Напишите программу, которая принимает на вход координаты двух точек
+// и находит расстояние между ними в 2D пространстве.
+// Например:
+// A (3, 6); B (2, 1) -> 5,09
+// A (7, -5); B (1, -1) -> 7,21
+
+// System.Console.WriteLine("Введите координаты Xa: ");
+// int xa = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Xb: ");
+// int xb = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Ya: ");
+// int ya = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Yb: ");
+// int yb = int.Parse(Console.ReadLine()!);
+// int x = (xa - xb) * (xa - xb);
+// int y = (ya - yb) * (ya - yb);
+// int xy = x + y;
+// System.Console.WriteLine(xy);
+// double result = Math.Sqrt(xy);
+
+// System.Console.WriteLine(result);
+
+
+// ************************************************************************************************
+// Задача № 10
+// Напишите программу, которая принимает на вход число (N)
+// и выдаёт таблицу квадратов чисел от 1 до N.
+// Например:
+// 5 -> 1, 4, 9, 16, 25
+// 2 -> 1, 4
+
+
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
+int check = 0;
+double result = 2;
+while (check != num)
 {
-    if (num == 1)
-        System.Console.WriteLine("X > 0, Y > 0");
-    else if (num == 2)
-        System.Console.WriteLine("X < 0, Y > 0");
-    else if (num == 3)
-        System.Console.WriteLine("X < 0, Y < 0");
-    else if (num == 4)
-        System.Console.WriteLine("X > 0, Y < 0");
-    else
-        System.Console.WriteLine("Такой четверти нет");
+    result = Math.Pow(result, 2);
+    check = check + 1;
+    System.Console.Write($"{result} ");
 }
-
-string CheckKoord2(int num)
-{
-    string result = "";
-    if (num == 1)
-        result = "X > 0, Y > 0";
-    else if (num == 2)
-        result = "X < 0, Y > 0";
-    else if (num == 3)
-        result = "X < 0, Y < 0";
-    else if (num == 4)
-        result = "X > 0, Y < 0";
-    return result;
-}
-
-
-System.Console.WriteLine("Введите четверь: ");
-int x = Convert.ToInt32(Console.ReadLine());
-CheckKoord(x);
-System.Console.WriteLine(CheckKoord2(x));
