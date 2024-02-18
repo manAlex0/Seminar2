@@ -388,25 +388,25 @@
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
-int numbGadf(int num)
-{
-    int num2 = num / 1000;
-    int num3 = num % 10;
-    int num4 = (num / 10) % 10;
-    string result1 = $"{num3}{num4}";
-    string result2 = $"{num2}";
-    if (result1 == result2)
-        System.Console.WriteLine("Да");
-    else
-        System.Console.WriteLine("Нет");
-    return num;
+// int numbGadf(int num)
+// {
+//     int num2 = num / 1000;
+//     int num3 = num % 10;
+//     int num4 = (num / 10) % 10;
+//     string result1 = $"{num3}{num4}";
+//     string result2 = $"{num2}";
+//     if (result1 == result2)
+//         System.Console.WriteLine("Да");
+//     else
+//         System.Console.WriteLine("Нет");
+//     return num;
 
-}
+// }
 
 
-System.Console.WriteLine("Введите число: ");
-int num1 = int.Parse(Console.ReadLine()!);
-numbGadf(num1);
+// System.Console.WriteLine("Введите число: ");
+// int num1 = int.Parse(Console.ReadLine()!);
+// numbGadf(num1);
 
 
 
@@ -416,7 +416,32 @@ numbGadf(num1);
 // Например:
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
+void NumResult(int xa, int xb, int ya,int yb, int za,int zb)
+{
+    int num1 = (xa-xb)*(xa-xb);
+    int num2 = (ya-yb)*(ya-yb);
+    int num3 = (za-zb)*(za-zb);
+    int result = num1 + num2 + num3;
+    double finishResult = Math.Sqrt(result);
+    System.Console.WriteLine(finishResult);
+}
 
+
+
+System.Console.WriteLine("Введите координаты Xa: ");
+int xa = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите координаты Xb: ");
+int xb = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите координаты Ya: ");
+int ya = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите координаты Yb: ");
+int yb = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите координаты Za: ");
+int za = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine("Введите координаты Zb: ");
+int zb = int.Parse(Console.ReadLine()!);
+
+NumResult(xa,xb,ya,yb,za,zb);
 
 
 
