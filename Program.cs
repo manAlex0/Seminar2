@@ -416,32 +416,31 @@
 // Например:
 // A (3,6,8); B (2,1,-7), -> 15.84
 // A (7,-5, 0); B (1,-1,9) -> 11.53
-void NumResult(int xa, int xb, int ya,int yb, int za,int zb)
-{
-    int num1 = (xa-xb)*(xa-xb);
-    int num2 = (ya-yb)*(ya-yb);
-    int num3 = (za-zb)*(za-zb);
-    int result = num1 + num2 + num3;
-    double finishResult = Math.Sqrt(result);
-    System.Console.WriteLine(finishResult);
-}
+// void NumResult(int xa, int xb, int ya,int yb, int za,int zb)
+// {
+//     int num1 = (xa-xb)*(xa-xb);
+//     int num2 = (ya-yb)*(ya-yb);
+//     int num3 = (za-zb)*(za-zb);
+//     int result = num1 + num2 + num3;
+//     double finishResult = Math.Sqrt(result);
+//     System.Console.WriteLine(finishResult);
+// }
 
 
+// System.Console.WriteLine("Введите координаты Xa: ");
+// int xa = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Xb: ");
+// int xb = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Ya: ");
+// int ya = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Yb: ");
+// int yb = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Za: ");
+// int za = int.Parse(Console.ReadLine()!);
+// System.Console.WriteLine("Введите координаты Zb: ");
+// int zb = int.Parse(Console.ReadLine()!);
 
-System.Console.WriteLine("Введите координаты Xa: ");
-int xa = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите координаты Xb: ");
-int xb = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите координаты Ya: ");
-int ya = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите координаты Yb: ");
-int yb = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите координаты Za: ");
-int za = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите координаты Zb: ");
-int zb = int.Parse(Console.ReadLine()!);
-
-NumResult(xa,xb,ya,yb,za,zb);
+// NumResult(xa,xb,ya,yb,za,zb);
 
 
 
@@ -452,8 +451,17 @@ NumResult(xa,xb,ya,yb,za,zb);
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
+void Result3(int n)
+{
+    for (int i = 1; i <= n; i++)
+        System.Console.Write($"{Math.Pow(i, 3)} ");
+}
 
 
+
+System.Console.WriteLine("Введите число: ");
+int n = int.Parse(Console.ReadLine()!);
+Result3(n);
 
 // ************************************************************************************************
 // Задача 4 - HARD необязательная
