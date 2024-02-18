@@ -353,13 +353,23 @@
 // 2 -> 1, 4
 
 
-System.Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine()!);
-int check = 0;
-int result = 0;
-while (check != num)
+// System.Console.WriteLine("Введите число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// int check = 0;
+// int result = 0;
+// while (check != num)
+// {
+//     result = result + 1;
+//     System.Console.Write($"{result * result} ");
+//     check +=1;
+// }
+
+// Через for
+
+System.Console.WriteLine($"Введите число N: ");
+int n = int.Parse(Console.ReadLine()!);
+System.Console.WriteLine($"Таблици квадратов чисел от 1 до {n}: ");
+for (int i = 1; i <= n; i++)
 {
-    result = result + 1;
-    System.Console.Write($"{result * result} ");
-    check +=1;
+    System.Console.WriteLine($"{i} в квадрате = {Math.Pow(i, 2)}");
 }
