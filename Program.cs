@@ -410,6 +410,7 @@
 
 
 
+
 // ************************************************************************************************
 // Задача 2
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
@@ -426,7 +427,6 @@
 //     System.Console.WriteLine(finishResult);
 // }
 
-
 // System.Console.WriteLine("Введите координаты Xa: ");
 // int xa = int.Parse(Console.ReadLine()!);
 // System.Console.WriteLine("Введите координаты Xb: ");
@@ -442,6 +442,31 @@
 
 // NumResult(xa,xb,ya,yb,za,zb);
 
+// ************************************************************************************************
+// Решение 2.
+
+// int InPut(string message)
+// {
+//     int value = 0;
+//     System.Console.WriteLine(message);
+//     value = int.Parse(Console.ReadLine()!);
+//     return value;
+// }
+// int x1 = InPut("Введите координату X первой точки: ");
+// int y1 = InPut("Введите координату Y первой точки: ");
+// int z1 = InPut("Введите координату Z первой точки: ");
+// int x2 = InPut("Введите координату X второй точки: ");
+// int y2 = InPut("Введите координату Y второй точки: ");
+// int z2 = InPut("Введите координату Z второй точки: ");
+
+// int a = x2 - x1;
+// int b = y2 - y1;
+// int c = z2 - z1;
+
+// double result = Math.Sqrt(a * a + b *b + c * c);
+// System.Console.WriteLine($"Расстояние между точками {result}");
+
+
 
 
 // ************************************************************************************************
@@ -451,22 +476,43 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-void Result3(int n)
-{
-    for (int i = 1; i <= n; i++)
-        System.Console.Write($"{Math.Pow(i, 3)} ");
-}
+// void Result3(int n)
+// {
+//     for (int i = 1; i <= n; i++)
+//         System.Console.Write($"{Math.Pow(i, 3)} ");
+// }
 
 
 
-System.Console.WriteLine("Введите число: ");
-int n = int.Parse(Console.ReadLine()!);
-Result3(n);
+// System.Console.WriteLine("Введите число: ");
+// int n = int.Parse(Console.ReadLine()!);
+// Result3(n);
+
+
+
+
 
 // ************************************************************************************************
 // Задача 4 - HARD необязательная
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними 
 // в N-мерном пространстве. Сначала задается N с клавиатуры, потом задаются координаты точек.
+
+
+
+System.Console.WriteLine("Введите N пространво: ");
+int n = int.Parse(Console.ReadLine()!);
+int[] arrayA = new int[n];
+System.Console.WriteLine("Введите координаты точки A: ");
+for (int i = 0; i < n; i++)
+{
+    arrayA[i] = int.Parse(Console.ReadLine()!);
+}
+System.Console.WriteLine("Введите координаты точки B: ");
+int[] arrayB = new int[n];
+for (int i = 0; i < n; i++)
+{
+    arrayB[i] = int.Parse(Console.ReadLine()!);
+}
 
 
 
