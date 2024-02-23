@@ -499,8 +499,10 @@
 
 
 
+
 System.Console.WriteLine("Введите N пространво: ");
 int n = int.Parse(Console.ReadLine()!);
+int result = 0;
 int[] arrayA = new int[n];
 System.Console.WriteLine("Введите координаты точки A: ");
 for (int i = 0; i < n; i++)
@@ -514,6 +516,14 @@ for (int i = 0; i < n; i++)
     arrayB[i] = int.Parse(Console.ReadLine()!);
 }
 
+for (int i =0; i<n; i++)
+{
+    result =result +(arrayA[i] - arrayB[i]) * (arrayA[i] - arrayB[i]);
+}
+System.Console.WriteLine(Math.Sqrt(result));
+
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
 
