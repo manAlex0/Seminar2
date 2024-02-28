@@ -519,6 +519,31 @@
 // }
 // System.Console.WriteLine(Math.Sqrt(result));
 
+// Решение методом
+
+// int InPut(string message)
+// {
+//     int value =0;
+//     System.Console.WriteLine(message);
+//     value = int.Parse(Console.ReadLine()!);
+//     return value;
+// }
+
+// System.Console.WriteLine("Введите мерность пространства: ");
+// int n = int.Parse(Console.ReadLine()!);
+// double[] x = new double[n];
+// double[] y = new double[n];
+// double[] z = new double[n];
+// double dist = 0;
+
+// for (int i =0;i<n;i++)
+// {
+//     if (i == 0)
+//     x[i] = InPut("Введите координату первой точки: ");
+//     else
+//     x[i] = InPut("Введите следующую координату первой точки: ");
+// }
+
 
 
 
@@ -527,31 +552,32 @@
 // Напишите программу, которая принимает на вход целое число любой разрядности и проверяет, 
 // является ли оно палиндромом. Через строку нельзя решать само собой.
 
-System.Console.WriteLine("Введите число: ");
-int num = int.Parse(Console.ReadLine()!);
-int numFirst = num;
-int check = 0;
-int index = 0;
-while (numFirst != 0)
-{
-    numFirst /= 10;
-    check++;
-}
-numFirst = num;
-int[] massNum = new int[check];
-for (int i = 0; i < check; i++)
-{
-    massNum[i] = num %= 10;
-    numFirst/=10;
-    num = numFirst;
-}
-int[] reverse = Enumerable.Reverse(massNum).ToArray();
-if (check > 0 && massNum[index] == reverse[index])
-{
-    index++;
-    System.Console.WriteLine("Палиндромное число");
-}
-else
-System.Console.WriteLine("Не является палиндромным числом");
+// System.Console.WriteLine("Введите число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// int numFirst = num;
+// int check = 0;
+// int index = 0;
+// while (numFirst != 0)
+// {
+//     numFirst /= 10;
+//     check++;
+// }
+// numFirst = num;
+// int[] massNum = new int[check];
+// for (int i = 0; i < check; i++)
+// {
+//     massNum[i] = num %= 10;
+//     numFirst/=10;
+//     num = numFirst;
+// }
+// int[] reverse = Enumerable.Reverse(massNum).ToArray();
+// if (check > 0 && massNum[index] == reverse[index])
+// {
+//     index++;
+//     System.Console.WriteLine("Палиндромное число");
+// }
+// else
+// System.Console.WriteLine("Не является палиндромным числом");
 
 // Решение методом
+
