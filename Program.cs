@@ -497,33 +497,28 @@
 // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними 
 // в N-мерном пространстве. Сначала задается N с клавиатуры, потом задаются координаты точек.
 
+// System.Console.WriteLine("Введите N пространво: ");
+// int n = int.Parse(Console.ReadLine()!);
+// int result = 0;
+// int[] arrayA = new int[n];
+// System.Console.WriteLine("Введите координаты точки A: ");
+// for (int i = 0; i < n; i++)
+// {
+//     arrayA[i] = int.Parse(Console.ReadLine()!);
+// }
+// System.Console.WriteLine("Введите координаты точки B: ");
+// int[] arrayB = new int[n];
+// for (int i = 0; i < n; i++)
+// {
+//     arrayB[i] = int.Parse(Console.ReadLine()!);
+// }
 
+// for (int i = 0; i < n; i++)
+// {
+//     result = result + (arrayA[i] - arrayB[i]) * (arrayA[i] - arrayB[i]);
+// }
+// System.Console.WriteLine(Math.Sqrt(result));
 
-
-System.Console.WriteLine("Введите N пространво: ");
-int n = int.Parse(Console.ReadLine()!);
-int result = 0;
-int[] arrayA = new int[n];
-System.Console.WriteLine("Введите координаты точки A: ");
-for (int i = 0; i < n; i++)
-{
-    arrayA[i] = int.Parse(Console.ReadLine()!);
-}
-System.Console.WriteLine("Введите координаты точки B: ");
-int[] arrayB = new int[n];
-for (int i = 0; i < n; i++)
-{
-    arrayB[i] = int.Parse(Console.ReadLine()!);
-}
-
-for (int i =0; i<n; i++)
-{
-    result =result +(arrayA[i] - arrayB[i]) * (arrayA[i] - arrayB[i]);
-}
-System.Console.WriteLine(Math.Sqrt(result));
-
-// A (3,6,8); B (2,1,-7), -> 15.84
-// A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
 
@@ -531,3 +526,32 @@ System.Console.WriteLine(Math.Sqrt(result));
 // Задача 5 - HARD необязательная
 // Напишите программу, которая принимает на вход целое число любой разрядности и проверяет, 
 // является ли оно палиндромом. Через строку нельзя решать само собой.
+
+System.Console.WriteLine("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
+int numFirst = num;
+int check = 0;
+int index = 0;
+while (numFirst != 0)
+{
+    numFirst /= 10;
+    check++;
+}
+numFirst = num;
+int[] massNum = new int[check];
+for (int i = 0; i < check; i++)
+{
+    massNum[i] = num %= 10;
+    numFirst/=10;
+    num = numFirst;
+}
+int[] reverse = Enumerable.Reverse(massNum).ToArray();
+if (check > 0 && massNum[index] == reverse[index])
+{
+    index++;
+    System.Console.WriteLine("Палиндромное число");
+}
+else
+System.Console.WriteLine("Не является палиндромным числом");
+
+// Решение методом
